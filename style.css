@@ -1,0 +1,856 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+     display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sidebar main";
+    position: relative;
+    background: rgb(27, 25, 25);
+    color: white;
+    font-size: 16px;
+     font-family: "Nunito Sans", sans-serif;
+     font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+i{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+button,input{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ASIDE STYLES */
+
+
+.aside{
+    grid-area: sidebar;
+    background: #2b2929;
+    position: fixed;
+    top: 0;left: 0;
+    height: 100%;
+    border-right: 2px solid gray;
+    z-index: 10;
+    width: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.aside .logo{
+    position: relative;
+}
+
+.aside .logo::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-right: 5px solid darkorange;
+    border-bottom: 5px solid darkorange;
+    position: absolute;
+    right:-50px;
+    bottom: -20px;
+}
+
+
+
+
+
+.aside .logo::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-top:5px solid darkorange;
+    border-left:5px solid darkorange;
+    position: absolute;
+    top:-10px;
+    left: -50px;
+ 
+
+}
+
+
+.aside .logo h1{
+    text-transform: capitalize;
+
+}
+
+.aside .logo h1 span{
+    font-weight: 700;
+    font-size: 2.2rem;
+      font-family: "Rouge Script", cursive;
+}
+
+
+.aside .links .link{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    gap: 20px;
+    
+}
+
+.aside .links .link a {
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.2s linear;
+    position: relative;
+
+}
+
+
+.aside .links .link a:hover{
+    color: darkorange;
+}
+
+.aside .links .link a.active{
+    color: darkorange;
+}
+
+
+
+
+
+
+
+
+/* MAIN STYLES */
+
+.main{
+    grid-area:main;
+    padding-left:3px;
+   
+}
+
+
+/* SECTION ACCUEIL STYLES */
+
+.accueil{
+
+    min-height: 100vh;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  
+}
+
+.accueil .accueil-description{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 60%;
+    
+
+}
+
+.accueil .accueil-description h1{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.accueil .accueil-description h1 span{
+    color: darkorange;
+}
+
+.accueil .accueil-description h3{
+    text-transform: capitalize;
+}
+
+.accueil .accueil-description p{
+    font-size: 1.2rem;
+}
+
+
+.accueil .accueil-description .btn button{
+    padding: 10px 30px;
+border-radius: 60px;
+text-transform: capitalize;
+    color: white;
+    background: darkorange;font-size: 1rem;
+    transition: all 0.3s linear;
+}
+
+.accueil .accueil-description .btn button:hover{
+    transform: scale(1.02);
+}
+
+
+.accueil .accueil-img {
+    position: relative;
+}
+
+.accueil .accueil-img::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-right: 10px solid darkorange;
+    border-bottom: 10px solid darkorange;
+    bottom: -30px ;
+}
+
+.accueil .accueil-img::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-left: 10px solid darkorange;
+    border-top: 10px solid darkorange;
+    top: -30px ;
+    left: -50px;
+}
+
+
+
+
+.accueil .accueil-img img{
+    width: 300px;
+}
+
+
+
+
+/* SECTION A PROPOS STYLES */
+
+.propos{
+    min-height: 100vh;
+     padding-left:100px;
+     padding-bottom: 100px;
+     
+ 
+}
+
+.propos .propos-head{
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.propos .propos-head::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: darkorange;
+    bottom: -13px;
+    left: 0;
+}
+
+.propos .propos-head::before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: darkorange;
+    bottom: -4px;
+    left: 0;
+}
+.propos-description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+ 
+}
+
+.propos-description h2{
+    text-transform: capitalize;
+
+}
+.propos-description h2 span{
+    color: darkorange;
+}
+
+
+.propos-description p{
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+
+.comp-propos{
+    /* display: grid;
+    grid-template-columns: repeat(2,400px);
+    gap: 30px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.comp-propos h3{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    
+}
+
+.comp-propos h3:hover{
+    color: darkorange;
+}
+.comp-propos .timeline-item{
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.comp-propos .timeline-item .circle-dot{
+    position: relative;
+}
+
+.comp-propos  .circle-dot::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid darkorange;
+    border-radius: 50%;
+    top: -13px;
+    left: -6px;
+    transition: all 0.3s linear;
+}
+
+.comp-propos  .circle-dot:hover::before{
+    background: darkorange;
+
+}
+.comp-propos .timeline{
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+    
+}
+
+.comp-propos .timeline::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: darkorange;
+}
+
+.comp-propos .educ{
+    border: 1px solid white;
+    /* background:rgba(255, 255, 255, 0.11); */
+    background: #101010;
+    padding: 40px;
+    padding: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    box-shadow: 0px 0px 2px;
+}
+
+
+.comp-propos .timeline .timeline-item .date{
+    margin-top: 10px;
+}
+
+.comp-propos .timeline .timeline-item .date i{
+    color: darkorange;
+}
+
+
+
+
+
+/* SECTION SERVICES STYLES */
+
+.services{
+    padding-left: 100px;
+    padding-bottom: 100px;
+}
+
+.services .services-head{
+    text-transform: capitalize;
+    position: relative;
+}
+
+.services .services-head::before{
+        content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: darkorange;
+    bottom: -4px;
+    left: 0;
+
+}
+
+
+.services .services-head::after{
+        content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: darkorange;
+    bottom: -13px;
+    left: 0;
+
+}
+
+.services .services-content .services-body{
+    /* display: grid;
+    grid-template-columns: repeat(2,400px);
+    gap: 40px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+ 
+    margin-top: 50px;
+    justify-content: center;
+}
+
+
+.services .services-content .services-body .box{
+    border: 1px solid gray;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+ 
+    border-radius: 10px;
+    background: rgba(34, 34, 34, 0.6);
+    transition: all 0.3s linear;
+}
+
+.services .services-content .services-body .box:hover{
+    box-shadow: 0px 0px 2px white;
+    transition: all 0.3s linear;
+}
+
+.services .services-content .services-body .box .services-img i{
+    font-size: 2rem;
+    color: darkorange;
+    position: relative;
+
+}
+.services .services-content .services-body .box .services-img i:hover{
+    color: white;
+}
+
+
+.services .services-content .services-body .servicesb h3{
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.services .services-content .services-body .servicesb h3:hover{
+    color: darkorange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION PORTFOLIO STYLES */
+
+.portfolio{
+    padding-left: 100px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+}
+
+.portfolio .portfolio-content .portfolio-head h1{
+    text-transform: capitalize;
+    position: relative;
+}
+.portfolio .portfolio-content .portfolio-head h1::before{
+          content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: darkorange;
+    bottom: -4px;
+    left: 0;
+
+}
+
+.portfolio .portfolio-content .portfolio-head h1::after{
+           content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: darkorange;
+    bottom: -13px;
+    left: 0;
+}
+
+
+.portfolio .portfolio-content  .portfolio-body{
+    margin-top: 25px;
+    display: grid;
+
+    gap: 40px;
+    grid-template-columns: repeat(3,300px);
+
+}
+
+.portfolio .portfolio-content  .portfolio-body .boxes{
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+.portfolio .portfolio-content  .portfolio-body .boxes:hover{
+    transform: scale(1.02);
+}
+
+
+
+.portfolio .portfolio-content  .portfolio-body  .boxes1{
+    background: url('FireShot\ Capture\ 017\ -\ Digitech\ -\ [project-rho-pink-49.vercel.app].png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.352);
+    background-blend-mode: overlay;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+
+}
+
+
+
+
+.portfolio .portfolio-content  .portfolio-body  .boxes2{
+        background: url('FireShot\ Capture\ 018\ -\ Intelligence\ Artificielle\ -\ [futurist.vercel.app].png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color:rgba(0, 0, 0, 0.352);
+    background-blend-mode: overlay;
+    width: 300;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    
+}
+
+.portfolio .portfolio-content  .portfolio-body   .boxes3{
+        background: url('FireShot\ Capture\ 019\ -\ restaurant\ -\ [restaurant-dun-omega.vercel.app].png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.352);
+    background-blend-mode: overlay;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+
+
+.portfolio .portfolio-content  .portfolio-body   .boxes4{
+        background: url('FireShot\ Capture\ 017\ -\ Digitech\ -\ [project-rho-pink-49.vercel.app].png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.352);
+    background-blend-mode: overlay;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+
+.portfolio .portfolio-content  .portfolio-body   .boxes5{
+        background: url('FireShot\ Capture\ 017\ -\ Digitech\ -\ [project-rho-pink-49.vercel.app].png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.352);
+    background-blend-mode: overlay;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+
+
+.portfolio .portfolio-content  .portfolio-body   .boxes6{
+        background: url('FireShot\ Capture\ 018\ -\ Intelligence\ Artificielle\ -\ [futurist.vercel.app].png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.352);
+    background-blend-mode: overlay;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+
+
+.portfolio .portfolio-content .portfolio-body .boxes .port-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.portfolio .portfolio-content .portfolio-body .boxes .port-btn a{
+    color: darkorange;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+.portfolio .portfolio-content .portfolio-body .boxes .port-btn  a:hover{
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+/* SECTION CONTACTS STYLES */
+
+.contacts{
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.contacts .contacts-content .contacts-head h1{
+    text-transform: capitalize;
+    position: relative;
+}
+
+
+.contacts .contacts-head h1::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: darkorange;
+    bottom: -13px;
+    left: 0;
+}
+
+.contacts .contacts-head h1::before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: darkorange;
+    bottom: -4px;
+    left: 0;
+}
+
+
+.contacts-body{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ .contacts-body .heady{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+ }
+
+ .contacts-body .heady h1{
+    color: darkorange;
+
+ }
+
+
+ .contacts-body .bod  {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    text-align: center;
+ }
+
+ .contacts-body .bod  .num{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+
+ .contacts-body .bod .num i{
+    font-size: 2rem;
+    color: darkorange;
+ }
+
+
+
+ .contacts-body .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    text-align: center;
+ }
+
+
+
+ .contacts-body .footer h2{
+    color: darkorange;
+ }
+
+
+
+ /* SCROLL BTN */
+
+ .scroll{
+    position: relative;
+ }
+
+ .scroll .scrollbtn{
+    position:fixed;
+    width: 50px;
+    height: 50px;
+    background: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+    opacity: 0;
+ }
+
+
+ .scroll .scrollbtn.show{
+    opacity: 1;
+ }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas: "main";
+    }
+
+    .aside{
+        display: none;
+    }
+
+    .main{
+     
+        grid-area: main;
+           padding: 20px 20px;
+        width: 100%;
+    }
+
+    .accueil-img{
+        display: none;
+    }
+
+
+
+    .accueil{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: self-start;
+    }
+
+  
+
+    .propos{
+        padding: 0;
+        margin-bottom: 60px;
+
+    }
+
+
+    .services{
+        padding: 0;
+        margin-bottom: 60px;
+    }
+    .services .services-content .services-body{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services .services-content .services-body .box{
+        text-align: start;
+    }
+
+
+
+    .portfolio{
+        padding: 0;
+        margin-bottom: 60px;
+    }
+   
+}
