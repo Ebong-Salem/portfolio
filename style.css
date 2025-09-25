@@ -193,7 +193,7 @@ button,input{
     position: fixed;
     width: 100%;
     height: 100%;
-    background:rgba(26, 25, 25, 0.603);
+    background:rgba(26, 25, 25, 0.868);
     backdrop-filter: blur(150px);
     top: 0;
     right: 0;
