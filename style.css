@@ -524,7 +524,7 @@ text-transform: capitalize;
     display: grid;
 
     gap: 40px;
-    grid-template-columns: repeat(3,300px);
+    grid-template-columns: repeat(2,400px);
 
 }
 
@@ -546,8 +546,8 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
 
@@ -564,8 +564,8 @@ text-transform: capitalize;
     background-position: center top;
     background-color:rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 300;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
     
@@ -578,8 +578,8 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
 
@@ -594,8 +594,8 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
 
@@ -609,8 +609,8 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
 
@@ -625,8 +625,8 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
 
@@ -817,10 +817,11 @@ text-transform: capitalize;
 
     .accueil{
         width: 100%;
-        min-height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: start;
+        margin: 50px auto;
         align-items: self-start;
     }
 
@@ -840,10 +841,7 @@ text-transform: capitalize;
     .services .services-content .services-body{
         justify-content: center;
         align-items: center;
-    }
-
-    .services .services-content .services-body .box{
-        text-align: start;
+        flex-wrap: wrap;
     }
 
 
@@ -852,5 +850,23 @@ text-transform: capitalize;
         padding: 0;
         margin-bottom: 60px;
     }
+
+    .contacts{
+        padding: 0;
+        margin-bottom: 60px;
+    }
+}
+
+
+
+
+@media screen and (max-width:906px) {
+    
+
+     .contacts-body .bod{
+        flex-direction: column;
+        gap: 25px;
+     }
    
+    
 }
