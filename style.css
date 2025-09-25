@@ -170,7 +170,7 @@ button,input{
     flex-direction: column;
     gap:20px;
     width: 60%;
-    
+   
 
 }
 
@@ -821,15 +821,17 @@ text-transform: capitalize;
 
     .accueil{
         width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        margin: 50px auto;
-        align-items: self-start;
+        min-height: 50vh;
+        margin-bottom: 60px;
+   
+        
+      
     }
 
   
+    .accueil .accueil-description{
+        width: 100%;
+    }
 
     .propos{
         padding: 0;
