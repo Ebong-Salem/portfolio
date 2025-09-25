@@ -149,6 +149,89 @@ button,input{
    
 }
 
+.btn{
+    position: relative;
+    display: none;
+}
+
+.btn .btngear{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgb(61, 59, 59);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+.btn .btngear i{
+    font-size: 1.6rem;
+    color: darkorange;
+}
+
+
+.main .navb{
+    position: relative;
+    display: none;
+
+}
+
+.main  .navb .links{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:rgba(26, 25, 25, 0.603);
+    backdrop-filter: blur(150px);
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.main .navb .menu-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: darkorange;
+    z-index: 20px;
+}
+
+
+.main .navb .links .link{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+}
+
+
+.main .navb .links .link a:hover{
+    color: darkorange;
+}
+
+.main .navb .links .link a.active{
+    color: darkorange;
+}
 
 /* SECTION ACCUEIL STYLES */
 
@@ -812,6 +895,31 @@ text-transform: capitalize;
            padding: 20px 20px;
         width: 100%;
     }
+
+
+    .btn{
+        display: block;
+    }
+
+    .main .navb{
+        display: block;
+        
+    }
+
+    .main .navb .links{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all 0.3s linear;
+    }
+
+    .main .navb.ouvert .links{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: all 0.3s linear;
+    }
+
+
+
+
+
 
     .accueil-img{
         display: none;
