@@ -167,6 +167,7 @@ button,input{
     align-items: center;
     cursor: pointer;
     animation: rotate 2s linear infinite;
+    z-index: 20;
 }
 
 @keyframes rotate {
