@@ -520,17 +520,21 @@ text-transform: capitalize;
 
 
 .portfolio .portfolio-content  .portfolio-body{
-    margin-top: 25px;
+    /* margin-top: 25px;
     display: grid;
-
     gap: 40px;
-    grid-template-columns: repeat(2,400px);
+    grid-template-columns: repeat(2,400px);  */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    gap: 40px;
 
 }
 
 .portfolio .portfolio-content  .portfolio-body .boxes{
     transition: all 0.3s linear;
     position: relative;
+    
 }
 
 .portfolio .portfolio-content  .portfolio-body .boxes:hover{
@@ -546,7 +550,7 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -564,7 +568,7 @@ text-transform: capitalize;
     background-position: center top;
     background-color:rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -578,7 +582,7 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -594,7 +598,7 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -609,7 +613,7 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -625,7 +629,7 @@ text-transform: capitalize;
     background-position: center top;
     background-color: rgba(0, 0, 0, 0.352);
     background-blend-mode: overlay;
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -692,7 +696,7 @@ text-transform: capitalize;
 
 
 .contacts-body{
-    margin-top: 25px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -832,6 +836,9 @@ text-transform: capitalize;
         margin-bottom: 60px;
 
     }
+    .comp-propos .educ{
+        width: 50%;
+    }
 
 
     .services{
@@ -868,5 +875,33 @@ text-transform: capitalize;
         gap: 25px;
      }
    
+    .services .services-content .services-body .box{
+        width: 50%;
+    }
+
+.portfolio .portfolio-content  .portfolio-body{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+    
+}
+
+
+
+
+
+@media screen and (max-width:661px) {
+      .services .services-content .services-body .box{
+        width: 100%;
+    }
+
+      .comp-propos .educ{
+        width: 100%;
+    }
+
+
     
 }
