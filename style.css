@@ -401,6 +401,10 @@ text-transform: capitalize;
     
 }
 
+.comp-propos h2:hover{
+     color: darkorange;
+}
+
 .comp-propos h3:hover{
     color: darkorange;
 }
