@@ -416,7 +416,7 @@ const SECONDARY: Project[] = [
     tags: ["REACT JS" , "TAILWIND CSS" ,"FRAMER MOTION"],
     image: novatech,
     accent: "orange",
-    href: "#",
+    href: "https://novatech-czc.pages.dev/",
     code: "https://github.com/Ebong-Salem/novatech.git",
   },
 ];
